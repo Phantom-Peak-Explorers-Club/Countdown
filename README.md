@@ -1,17 +1,12 @@
-# Portrait master update
+# Portrait CSS fit update
 
-Replace these files in the GitHub Pages repository:
+Replace only `index.html`.
 
-- `index.html`
-- `Assets/refurb-portrait.webp`
-- `Assets/refurb-portrait.jpg`
-
-The landscape artwork is unchanged.
-
-The portrait live content is now centred inside the clean lower panel:
-- NO / YES
-- reopening date/time
-- live DAYS : HRS : MINS : SECS countdown
-
-Automatic handover at 00:01 London time on 25 August 2026 remains unchanged.
-Hidden preview remains available with `?preview=refurb`.
+Changes:
+- portrait live block moved fully inside the lower framed box
+- NO/YES reduced slightly
+- reopening date tightened
+- countdown strip reduced and centred
+- no artwork changes
+- landscape unchanged
+- automatic switch and ?preview=refurb unchanged
