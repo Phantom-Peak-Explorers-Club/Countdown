@@ -1,12 +1,10 @@
-# Portrait CSS fit update
+# Landscape ticket countdown bar update
 
 Replace only `index.html`.
 
-Changes:
-- portrait live block moved fully inside the lower framed box
-- NO/YES reduced slightly
-- reopening date tightened
-- countdown strip reduced and centred
-- no artwork changes
-- landscape unchanged
-- automatic switch and ?preview=refurb unchanged
+Landscape/laptop change:
+- ticket access bar is pulled upward over the bottom edge of the hero
+- bar/cards use less vertical padding
+- short laptop screens pull it up slightly further
+- portrait/mobile layouts are unchanged
+- refurbishment view and automatic handover remain unchanged
