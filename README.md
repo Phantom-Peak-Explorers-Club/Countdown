@@ -1,19 +1,34 @@
-# Phantom Peak Countdown — app icon update
+# Phantom Peak countdown automatic handover
 
-Upload these files/folders to the root of the existing GitHub Pages repository:
+Upload `index.html` and the four new files in `Assets/` to the existing GitHub Pages repository.
+Do not delete the existing Assets, icons or manifest files.
 
-- `index.html` — updated with favicon / PWA metadata
-- `manifest.webmanifest` — web-app manifest
-- `icons/` — favicon and home-screen icon set
+## Automatic behaviour
 
-Keep the existing `Assets/` folder already in the repo.
+The current ticket countdown remains active until:
 
-Included icon sizes:
-- 16×16 favicon
-- 32×32 favicon
-- 180×180 Apple touch icon
-- 192×192 Android/PWA icon
-- 512×512 Android/PWA icon
-- 512×512 maskable icon
+**00:01 London time — Tuesday 25 August 2026**
 
-When someone uses "Add to Home screen", the app name will display as **Phantom Peak Countdown**.
+At that moment the same page automatically changes to the new Phantom Peak refurbishment view.
+
+The new live countdown runs to:
+
+**18:00 London time — Friday 4 December 2026**
+
+At 18:00 the lower status automatically changes from **NO** to **YES**, the countdown is hidden, and the message becomes **PHANTOM PEAK IS REDONE!**
+
+## Hidden testing
+
+Before the handover, add:
+
+`?preview=refurb`
+
+to the end of your normal page URL to force the new view.
+
+Use:
+
+`?preview=tickets`
+
+to force the existing ticket view.
+
+Remove the query string to return to automatic mode.
