@@ -1,14 +1,17 @@
-# Phantom Peak refurbishment update
+# Portrait master update
 
-Upload/replace:
-- index.html
-- Assets/refurb-landscape.jpg
-- Assets/refurb-landscape.webp
-- Assets/refurb-portrait.jpg
-- Assets/refurb-portrait.webp
+Replace these files in the GitHub Pages repository:
 
-The current ticket page still switches automatically at 00:01 London time on Tuesday 25 August 2026.
-The refurbishment countdown still targets 18:00 London time on Friday 4 December 2026.
+- `index.html`
+- `Assets/refurb-portrait.webp`
+- `Assets/refurb-portrait.jpg`
 
-Hidden preview remains:
-?preview=refurb
+The landscape artwork is unchanged.
+
+The portrait live content is now centred inside the clean lower panel:
+- NO / YES
+- reopening date/time
+- live DAYS : HRS : MINS : SECS countdown
+
+Automatic handover at 00:01 London time on 25 August 2026 remains unchanged.
+Hidden preview remains available with `?preview=refurb`.
