@@ -410,102 +410,166 @@
       display:flex;
       flex-direction:column;
       align-items:center;
-      justify-content:center;
+      justify-content:flex-start;
       text-align:center;
-      padding:1rem;
       min-width:0;
+      padding:0;
+      color:#6e241b;
+      pointer-events:none;
     }
 
     .refurb-state{
+      margin:0;
       font-family:"Sancreek","Rockwell Extra Bold",Rockwell,serif;
-      font-size:clamp(4.5rem,9.2vw,10rem);
-      line-height:.85;
+      font-size:clamp(4rem,8.8vw,9.5rem);
+      line-height:.82;
       color:#8d3325;
       text-transform:uppercase;
-      letter-spacing:.015em;
-      max-width:100%;
+      letter-spacing:.01em;
       white-space:nowrap;
+      max-width:100%;
     }
 
     .refurb-message{
-      margin-top:.65rem;
-      max-width:100%;
+      margin:.55rem 0 0;
+      width:100%;
       font-family:"Rockwell Extra Bold",Rockwell,"Courier New",serif;
       font-weight:900;
-      font-size:clamp(.8rem,1.35vw,1.35rem);
-      line-height:1.15;
+      font-size:clamp(.72rem,1.05vw,1.08rem);
+      line-height:1.1;
       color:#6e241b;
       text-transform:uppercase;
+      letter-spacing:.03em;
+      white-space:normal;
     }
 
     .refurb-countdown{
-      width:100%;
-      margin-top:1rem;
+      width:94%;
+      margin-top:.75rem;
       display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:clamp(.35rem,.8vw,.8rem);
+      grid-template-columns:minmax(0,1.5fr) auto minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);
+      align-items:end;
+      gap:clamp(.18rem,.4vw,.45rem);
+      padding:.6rem .7rem .5rem;
+      border:2px solid rgba(94,54,30,.58);
+      background:rgba(232,199,147,.14);
+      box-shadow:inset 0 0 0 1px rgba(255,247,223,.12);
     }
 
     .refurb-unit{
       min-width:0;
-      padding:.55rem .3rem .4rem;
-      border:2px solid rgba(94,54,30,.65);
-      background:rgba(236,207,160,.22);
-      box-shadow:inset 0 0 0 1px rgba(255,247,223,.18);
+      text-align:center;
     }
 
     .refurb-unit strong{
       display:block;
       font-family:"Sancreek","Rockwell Extra Bold",Rockwell,serif;
-      font-size:clamp(1.7rem,3.4vw,3.6rem);
-      line-height:.9;
+      font-size:clamp(1.75rem,3.2vw,3.4rem);
+      line-height:.86;
       color:#3b241a;
       white-space:nowrap;
     }
 
     .refurb-unit span{
       display:block;
-      margin-top:.35rem;
+      margin-top:.3rem;
       font-family:"Rockwell Extra Bold",Rockwell,serif;
-      font-size:clamp(.48rem,.78vw,.78rem);
+      font-size:clamp(.45rem,.68vw,.7rem);
+      line-height:1;
       font-weight:900;
       color:#513122;
       letter-spacing:.05em;
       text-transform:uppercase;
     }
 
+    .refurb-sep{
+      align-self:start;
+      margin-top:.08em;
+      font-family:"Sancreek","Rockwell Extra Bold",Rockwell,serif;
+      font-size:clamp(1.45rem,2.6vw,2.8rem);
+      line-height:1;
+      color:#6a402d;
+    }
+
     @media (orientation:landscape){
       .refurb-live{
-        left:31.5%;
-        top:51.5%;
-        width:39.5%;
-        height:27.5%;
+        left:32.2%;
+        top:55.2%;
+        width:38.2%;
+        height:21%;
       }
     }
 
     @media (orientation:portrait){
       .refurb-live{
-        left:22%;
-        top:48%;
-        width:58%;
-        height:31%;
-        padding:.6rem;
+        left:28%;
+        top:50.6%;
+        width:50%;
+        height:22%;
       }
 
-      .refurb-state{font-size:clamp(4.8rem,20vw,9rem);}
-      .refurb-message{margin-top:.5rem;font-size:clamp(.7rem,3.2vw,1.15rem);}
-      .refurb-countdown{grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem;margin-top:.7rem;}
-      .refurb-unit{padding:.45rem .25rem .35rem;}
-      .refurb-unit strong{font-size:clamp(1.8rem,8.5vw,3.1rem);}
-      .refurb-unit span{font-size:clamp(.48rem,2.4vw,.72rem);}
+      .refurb-state{
+        font-size:clamp(4.2rem,18vw,7.4rem);
+      }
+
+      .refurb-message{
+        margin-top:.4rem;
+        font-size:clamp(.62rem,2.45vw,.92rem);
+        line-height:1.12;
+      }
+
+      .refurb-countdown{
+        width:100%;
+        margin-top:.58rem;
+        padding:.48rem .4rem .42rem;
+        gap:clamp(.08rem,.5vw,.22rem);
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(1.35rem,6.5vw,2.25rem);
+      }
+
+      .refurb-unit span{
+        margin-top:.22rem;
+        font-size:clamp(.38rem,1.8vw,.56rem);
+      }
+
+      .refurb-sep{
+        font-size:clamp(1rem,4.6vw,1.7rem);
+      }
     }
 
     @media (max-width:390px) and (orientation:portrait){
-      .refurb-live{left:20.5%;width:61%;top:48.3%;height:30%;}
-      .refurb-state{font-size:clamp(4.2rem,21vw,6.6rem);}
-      .refurb-message{font-size:.68rem;}
-    }
+      .refurb-live{
+        left:27.5%;
+        width:51.5%;
+        top:50.9%;
+      }
 
+      .refurb-state{
+        font-size:clamp(3.8rem,18vw,6rem);
+      }
+
+      .refurb-message{
+        font-size:.59rem;
+      }
+
+      .refurb-countdown{
+        padding:.42rem .28rem .38rem;
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(1.18rem,6.2vw,1.85rem);
+      }
+
+      .refurb-unit span{
+        font-size:.36rem;
+      }
+
+      .refurb-sep{
+        font-size:1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -589,11 +653,14 @@
         <div class="refurb-live" aria-live="polite">
           <div id="refurbState" class="refurb-state">NO</div>
           <div id="refurbMessage" class="refurb-message">Reopening Friday 4 December 2026 · 18:00</div>
-          <div id="refurbCountdown" class="refurb-countdown">
+          <div id="refurbCountdown" class="refurb-countdown" aria-label="Time until Phantom Peak reopens">
             <div class="refurb-unit"><strong id="refurbDays">000</strong><span>Days</span></div>
-            <div class="refurb-unit"><strong id="refurbHours">00</strong><span>Hours</span></div>
-            <div class="refurb-unit"><strong id="refurbMinutes">00</strong><span>Minutes</span></div>
-            <div class="refurb-unit"><strong id="refurbSeconds">00</strong><span>Seconds</span></div>
+            <span class="refurb-sep" aria-hidden="true">:</span>
+            <div class="refurb-unit"><strong id="refurbHours">00</strong><span>Hrs</span></div>
+            <span class="refurb-sep" aria-hidden="true">:</span>
+            <div class="refurb-unit"><strong id="refurbMinutes">00</strong><span>Mins</span></div>
+            <span class="refurb-sep" aria-hidden="true">:</span>
+            <div class="refurb-unit"><strong id="refurbSeconds">00</strong><span>Secs</span></div>
           </div>
         </div>
       </div>
