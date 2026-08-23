@@ -1,10 +1,14 @@
-# GitHub update
+# Phantom Peak refurbishment update
 
-Replace `index.html` in the repo and upload/replace the four files in `Assets/`.
+Upload/replace:
+- index.html
+- Assets/refurb-landscape.jpg
+- Assets/refurb-landscape.webp
+- Assets/refurb-portrait.jpg
+- Assets/refurb-portrait.webp
 
-This keeps the current ticket page and automatic 25 August handover intact.
+The current ticket page still switches automatically at 00:01 London time on Tuesday 25 August 2026.
+The refurbishment countdown still targets 18:00 London time on Friday 4 December 2026.
 
-The refurbishment page now uses one compact countdown strip:
-DAYS : HRS : MINS : SECS
-
-The overlay is tightened to stay inside the lower parchment and clear of Jonabot on portrait phones.
+Hidden preview remains:
+?preview=refurb
