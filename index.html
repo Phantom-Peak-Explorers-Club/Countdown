@@ -639,6 +639,256 @@
       }
     }
 
+  
+    /* =========================================================
+       Refurbishment live panel — device-safe final constraints
+       Keeps all dynamic text inside the artwork's lower panel.
+       ========================================================= */
+
+    .refurb-live{
+      overflow:hidden;
+      min-width:0;
+      min-height:0;
+    }
+
+    .refurb-live > *{
+      flex-shrink:0;
+      min-width:0;
+      max-width:100%;
+    }
+
+    .refurb-state{
+      max-width:92%;
+      overflow:hidden;
+      text-overflow:clip;
+    }
+
+    .refurb-message{
+      box-sizing:border-box;
+      overflow-wrap:normal;
+      word-break:normal;
+    }
+
+    .refurb-countdown{
+      box-sizing:border-box;
+      overflow:hidden;
+      min-width:0;
+    }
+
+    .refurb-unit{
+      min-width:0;
+      overflow:hidden;
+    }
+
+    .refurb-unit strong,
+    .refurb-unit span,
+    .refurb-sep{
+      max-width:100%;
+      overflow:hidden;
+      text-overflow:clip;
+    }
+
+    /* Landscape: generous safe inset from all four frame edges. */
+    @media (orientation:landscape){
+      .refurb-live{
+        left:33.2%;
+        top:55.8%;
+        width:36.2%;
+        height:20.2%;
+        justify-content:flex-start;
+        padding-top:.2%;
+      }
+
+      .refurb-state{
+        font-size:clamp(3.3rem,7.1vw,7.2rem);
+        line-height:.82;
+      }
+
+      .refurb-message{
+        margin-top:.32rem;
+        max-width:88%;
+        font-size:clamp(.58rem,.82vw,.86rem);
+        line-height:1.08;
+      }
+
+      .refurb-countdown{
+        width:86%;
+        margin-top:.48rem;
+        padding:.32rem .42rem .38rem;
+        gap:clamp(.08rem,.28vw,.2rem);
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(1.15rem,2.45vw,2.5rem);
+        line-height:.84;
+      }
+
+      .refurb-unit span{
+        margin-top:.2rem;
+        font-size:clamp(.38rem,.5vw,.56rem);
+        line-height:1;
+      }
+
+      .refurb-sep{
+        font-size:clamp(.9rem,1.8vw,1.8rem);
+        line-height:.9;
+      }
+    }
+
+    /* Short landscape screens / laptops: slightly tighter again. */
+    @media (orientation:landscape) and (max-height:820px){
+      .refurb-live{
+        top:56.2%;
+        height:19.5%;
+      }
+
+      .refurb-state{
+        font-size:clamp(3rem,6.4vw,6.3rem);
+      }
+
+      .refurb-message{
+        margin-top:.24rem;
+        font-size:clamp(.52rem,.72vw,.76rem);
+      }
+
+      .refurb-countdown{
+        width:84%;
+        margin-top:.36rem;
+        padding:.26rem .36rem .32rem;
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(1rem,2.15vw,2.15rem);
+      }
+
+      .refurb-unit span{
+        font-size:clamp(.34rem,.44vw,.48rem);
+      }
+
+      .refurb-sep{
+        font-size:clamp(.82rem,1.55vw,1.55rem);
+      }
+    }
+
+    /* Portrait phones and tablets: centre safely within blank lower panel. */
+    @media (orientation:portrait){
+      .refurb-live{
+        left:25%;
+        top:63.2%;
+        width:50%;
+        height:18.2%;
+        justify-content:flex-start;
+        padding-top:.15%;
+      }
+
+      .refurb-state{
+        font-size:clamp(3.6rem,15.2vw,6.6rem);
+        line-height:.82;
+      }
+
+      .refurb-message{
+        margin-top:.34rem;
+        max-width:88%;
+        font-size:clamp(.54rem,1.95vw,.84rem);
+        line-height:1.08;
+      }
+
+      .refurb-countdown{
+        width:88%;
+        margin-top:.48rem;
+        padding:.34rem .28rem .34rem;
+        gap:clamp(.04rem,.32vw,.13rem);
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(.98rem,4.65vw,1.8rem);
+        line-height:.84;
+      }
+
+      .refurb-unit span{
+        margin-top:.16rem;
+        font-size:clamp(.28rem,1.18vw,.44rem);
+        line-height:1;
+      }
+
+      .refurb-sep{
+        font-size:clamp(.76rem,3.05vw,1.18rem);
+        line-height:.9;
+      }
+    }
+
+    /* Narrow phones. */
+    @media (max-width:430px) and (orientation:portrait){
+      .refurb-live{
+        left:24.5%;
+        top:63.5%;
+        width:51%;
+        height:17.8%;
+      }
+
+      .refurb-state{
+        font-size:clamp(3.15rem,14.8vw,5.15rem);
+      }
+
+      .refurb-message{
+        max-width:86%;
+        margin-top:.28rem;
+        font-size:clamp(.48rem,1.85vw,.65rem);
+      }
+
+      .refurb-countdown{
+        width:86%;
+        margin-top:.4rem;
+        padding:.3rem .18rem .3rem;
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(.86rem,4.35vw,1.42rem);
+      }
+
+      .refurb-unit span{
+        font-size:clamp(.25rem,1.08vw,.34rem);
+      }
+
+      .refurb-sep{
+        font-size:clamp(.68rem,2.8vw,.92rem);
+      }
+    }
+
+    /* Larger portrait tablets can use a little more of the panel. */
+    @media (min-width:700px) and (orientation:portrait){
+      .refurb-live{
+        left:24%;
+        top:62.8%;
+        width:52%;
+        height:18.5%;
+      }
+
+      .refurb-state{
+        font-size:clamp(5rem,13vw,8rem);
+      }
+
+      .refurb-message{
+        font-size:clamp(.82rem,1.8vw,1.15rem);
+      }
+
+      .refurb-countdown{
+        width:90%;
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(1.6rem,4.1vw,2.7rem);
+      }
+
+      .refurb-unit span{
+        font-size:clamp(.46rem,1vw,.66rem);
+      }
+
+      .refurb-sep{
+        font-size:clamp(1.2rem,2.6vw,1.8rem);
+      }
+    }
+
   </style>
 </head>
 <body>

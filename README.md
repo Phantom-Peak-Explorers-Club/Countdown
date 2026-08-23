@@ -1,10 +1,17 @@
-# Landscape ticket countdown bar update
+# Responsive-safe final CSS update
 
 Replace only `index.html`.
 
-Landscape/laptop change:
-- ticket access bar is pulled upward over the bottom edge of the hero
-- bar/cards use less vertical padding
-- short laptop screens pull it up slightly further
-- portrait/mobile layouts are unchanged
-- refurbishment view and automatic handover remain unchanged
+This update does not change any artwork.
+
+It adds final device-safe constraints for the refurbishment live panel:
+- all live content is clipped/constrained to the intended parchment area
+- safer inner margins
+- dedicated narrow-phone sizing
+- dedicated portrait-tablet sizing
+- dedicated standard landscape sizing
+- tighter short-laptop landscape sizing
+- countdown labels stay inside their strip
+- landscape ticket access bar optimisation remains in place
+- automatic 25 August handover remains in place
+- hidden `?preview=refurb` preview remains in place
