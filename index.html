@@ -889,6 +889,265 @@
       }
     }
 
+  
+    /* =========================================================
+       FINAL refurbishment placement override
+       Uses the real artwork geometry rather than compressing the
+       live content into one shallow flex block.
+       ========================================================= */
+
+    /* Never crop the decorative tops/bottoms of the state font. */
+    .refurb-state{
+      overflow:visible !important;
+      line-height:.96 !important;
+      padding:.08em .04em .03em;
+      box-sizing:border-box;
+    }
+
+    /* Parent still protects the artwork frame from true overflow. */
+    .refurb-live{
+      overflow:hidden;
+      box-sizing:border-box;
+    }
+
+    .refurb-message,
+    .refurb-countdown{
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    /* ===== LANDSCAPE: spread content vertically through the lower board ===== */
+    @media (orientation:landscape){
+      .refurb-live{
+        left:31.7%;
+        top:60.2%;
+        width:39.2%;
+        height:25.2%;
+        padding:.2% 1.4% .7%;
+        justify-content:flex-start;
+        gap:0;
+      }
+
+      .refurb-state{
+        margin:0;
+        max-width:94%;
+        font-size:clamp(3.6rem,7vw,7.4rem);
+      }
+
+      .refurb-message{
+        margin-top:clamp(.45rem,1.1vh,.9rem);
+        max-width:90%;
+        font-size:clamp(.62rem,.9vw,.95rem);
+        line-height:1.15;
+      }
+
+      .refurb-countdown{
+        width:90%;
+        margin-top:clamp(.7rem,1.8vh,1.3rem);
+        padding:clamp(.34rem,.75vh,.62rem) clamp(.4rem,.65vw,.7rem);
+        gap:clamp(.08rem,.3vw,.24rem);
+        align-items:center;
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(1.25rem,2.6vw,2.75rem);
+        line-height:.96;
+      }
+
+      .refurb-unit span{
+        margin-top:.24rem;
+        font-size:clamp(.4rem,.54vw,.62rem);
+        line-height:1.05;
+      }
+
+      .refurb-sep{
+        align-self:center;
+        margin-top:-.32em;
+        font-size:clamp(.95rem,1.9vw,1.95rem);
+        line-height:1;
+      }
+    }
+
+    /* Typical laptop heights: keep the breathing room, just scale slightly. */
+    @media (orientation:landscape) and (max-height:820px){
+      .refurb-live{
+        top:59.8%;
+        height:25.8%;
+      }
+
+      .refurb-state{
+        font-size:clamp(3.2rem,6.3vw,6.5rem);
+      }
+
+      .refurb-message{
+        margin-top:clamp(.36rem,.8vh,.65rem);
+        font-size:clamp(.56rem,.78vw,.84rem);
+      }
+
+      .refurb-countdown{
+        margin-top:clamp(.52rem,1.15vh,.9rem);
+        padding:.3rem .42rem .38rem;
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(1.05rem,2.2vw,2.25rem);
+      }
+
+      .refurb-unit span{
+        font-size:clamp(.34rem,.46vw,.52rem);
+      }
+
+      .refurb-sep{
+        font-size:clamp(.82rem,1.55vw,1.55rem);
+      }
+    }
+
+    /* Very wide/short screens: use width rather than letting the row crush vertically. */
+    @media (orientation:landscape) and (max-height:620px){
+      .refurb-live{
+        left:31.2%;
+        top:59.2%;
+        width:40.2%;
+        height:27%;
+      }
+
+      .refurb-state{
+        font-size:clamp(2.8rem,5.7vw,5.6rem);
+      }
+
+      .refurb-message{
+        margin-top:.26rem;
+      }
+
+      .refurb-countdown{
+        width:88%;
+        margin-top:.4rem;
+        padding:.24rem .36rem .3rem;
+      }
+    }
+
+    /* ===== PORTRAIT: preserve current good placement, fix clipping ===== */
+    @media (orientation:portrait){
+      .refurb-live{
+        left:25%;
+        top:63.5%;
+        width:50%;
+        height:18.7%;
+        padding:.3% 1% .6%;
+        justify-content:flex-start;
+      }
+
+      .refurb-state{
+        margin:0;
+        max-width:92%;
+        font-size:clamp(3.5rem,14.8vw,6.4rem);
+      }
+
+      .refurb-message{
+        margin-top:clamp(.28rem,.65vh,.5rem);
+        max-width:88%;
+        font-size:clamp(.52rem,1.9vw,.82rem);
+        line-height:1.13;
+      }
+
+      .refurb-countdown{
+        width:88%;
+        margin-top:clamp(.4rem,.9vh,.68rem);
+        padding:.32rem .26rem .36rem;
+        gap:clamp(.04rem,.3vw,.13rem);
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(.96rem,4.55vw,1.75rem);
+        line-height:.94;
+      }
+
+      .refurb-unit span{
+        margin-top:.16rem;
+        font-size:clamp(.28rem,1.16vw,.43rem);
+        line-height:1;
+      }
+
+      .refurb-sep{
+        align-self:center;
+        margin-top:-.28em;
+        font-size:clamp(.72rem,2.95vw,1.14rem);
+        line-height:1;
+      }
+    }
+
+    @media (max-width:430px) and (orientation:portrait){
+      .refurb-live{
+        left:24.5%;
+        top:63.7%;
+        width:51%;
+        height:18.3%;
+      }
+
+      .refurb-state{
+        font-size:clamp(3.05rem,14.2vw,5rem);
+      }
+
+      .refurb-message{
+        max-width:86%;
+        font-size:clamp(.47rem,1.8vw,.63rem);
+      }
+
+      .refurb-countdown{
+        width:86%;
+        margin-top:.38rem;
+        padding:.28rem .18rem .32rem;
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(.84rem,4.25vw,1.38rem);
+      }
+
+      .refurb-unit span{
+        font-size:clamp(.24rem,1.04vw,.33rem);
+      }
+
+      .refurb-sep{
+        font-size:clamp(.64rem,2.65vw,.9rem);
+      }
+    }
+
+    /* Tablets get a little more breathing room, not just bigger type. */
+    @media (min-width:700px) and (orientation:portrait){
+      .refurb-live{
+        left:24%;
+        top:63%;
+        width:52%;
+        height:19%;
+      }
+
+      .refurb-state{
+        font-size:clamp(4.8rem,12.5vw,7.8rem);
+      }
+
+      .refurb-message{
+        margin-top:.55rem;
+        font-size:clamp(.78rem,1.7vw,1.1rem);
+      }
+
+      .refurb-countdown{
+        width:90%;
+        margin-top:.8rem;
+      }
+
+      .refurb-unit strong{
+        font-size:clamp(1.5rem,4vw,2.6rem);
+      }
+
+      .refurb-unit span{
+        font-size:clamp(.44rem,.96vw,.64rem);
+      }
+
+      .refurb-sep{
+        font-size:clamp(1.1rem,2.5vw,1.7rem);
+      }
+    }
+
   </style>
 </head>
 <body>

@@ -1,17 +1,12 @@
-# Responsive-safe final CSS update
+# Final placement correction
 
 Replace only `index.html`.
 
-This update does not change any artwork.
-
-It adds final device-safe constraints for the refurbishment live panel:
-- all live content is clipped/constrained to the intended parchment area
-- safer inner margins
-- dedicated narrow-phone sizing
-- dedicated portrait-tablet sizing
-- dedicated standard landscape sizing
-- tighter short-laptop landscape sizing
-- countdown labels stay inside their strip
-- landscape ticket access bar optimisation remains in place
-- automatic 25 August handover remains in place
-- hidden `?preview=refurb` preview remains in place
+Code-only changes:
+- fixes top/bottom clipping of NO/YES by removing text-level overflow clipping and using a safe line-height
+- landscape live content now uses more of the lower parchment vertically rather than bunching near the heading
+- separate rules for normal landscape, short laptops, very wide/short screens, portrait phones and portrait tablets
+- all live content remains constrained by the parent panel
+- artwork unchanged
+- 2pm Tuesday 25 August switch unchanged
+- ?preview=refurb unchanged
