@@ -1,16 +1,13 @@
-# Live automatic transition update
+# Immediate refurbishment switch
 
 Replace only `index.html`.
 
-Timed changes now happen while the page is already open:
+The refurbishment page is now active immediately.
 
-- ticket access windows update live
-- the site switches to the refurbishment page automatically at 2:00pm London time on Tuesday 25 August 2026
-- the refurbishment countdown updates every second
-- the December reopening state changes automatically at the target time
-
-No manual refresh is required.
-
-Mobile browsers can throttle JavaScript in the background, so the page also recalculates immediately when the tab becomes visible again, the browser regains focus, or the page is restored from cache/history.
-
-Artwork and responsive layout are unchanged.
+Everything else remains unchanged:
+- live countdown to 18:00 London time on Friday 4 December 2026
+- live second-by-second updates
+- mobile background-tab recovery
+- responsive phone/tablet/laptop layout
+- `?preview=tickets` can still force the old ticket page for testing
+- `?preview=refurb` still forces the refurbishment page
