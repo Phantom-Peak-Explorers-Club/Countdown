@@ -1400,7 +1400,20 @@
     }
 
     update();
-    setInterval(update,1000);
+
+    // Keep all timed state changes live while the page remains open.
+    // Ticket windows, the 2pm handover, and the December reopening
+    // all update automatically without a manual refresh.
+    const liveTimer = setInterval(update, 1000);
+
+    // Mobile browsers may throttle timers in background tabs.
+    // Recalculate immediately when the page becomes active again.
+    document.addEventListener("visibilitychange", () => {
+      if(!document.hidden) update();
+    });
+
+    window.addEventListener("focus", update);
+    window.addEventListener("pageshow", update);
   </script>
 </body>
 </html>

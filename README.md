@@ -1,12 +1,16 @@
-# Final placement correction
+# Live automatic transition update
 
 Replace only `index.html`.
 
-Code-only changes:
-- fixes top/bottom clipping of NO/YES by removing text-level overflow clipping and using a safe line-height
-- landscape live content now uses more of the lower parchment vertically rather than bunching near the heading
-- separate rules for normal landscape, short laptops, very wide/short screens, portrait phones and portrait tablets
-- all live content remains constrained by the parent panel
-- artwork unchanged
-- 2pm Tuesday 25 August switch unchanged
-- ?preview=refurb unchanged
+Timed changes now happen while the page is already open:
+
+- ticket access windows update live
+- the site switches to the refurbishment page automatically at 2:00pm London time on Tuesday 25 August 2026
+- the refurbishment countdown updates every second
+- the December reopening state changes automatically at the target time
+
+No manual refresh is required.
+
+Mobile browsers can throttle JavaScript in the background, so the page also recalculates immediately when the tab becomes visible again, the browser regains focus, or the page is restored from cache/history.
+
+Artwork and responsive layout are unchanged.
