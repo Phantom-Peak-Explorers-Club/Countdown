@@ -1230,7 +1230,7 @@
 
         <div class="refurb-live" aria-live="polite">
           <div id="refurbState" class="refurb-state">NO</div>
-          <div id="refurbMessage" class="refurb-message">Reopening Friday 4 December 2026 · 18:00</div>
+          <div id="refurbMessage" class="refurb-message">Reopening Friday 12 February 2027 · 18:00</div>
           <div id="refurbCountdown" class="refurb-countdown" aria-label="Time until Phantom Peak reopens">
             <div class="refurb-unit"><strong id="refurbDays">000</strong><span>Days</span></div>
             <span class="refurb-sep" aria-hidden="true">:</span>
@@ -1325,8 +1325,8 @@
     // 00:01 London time Tue 25 Aug 2026 = 23:01 UTC Mon 24 Aug (BST).
     const REFURB_PAGE_AT = Date.parse("2026-08-24T00:00:00Z");
 
-    // 18:00 London time Fri 4 Dec 2026 = 18:00 UTC (GMT).
-    const PHANTOM_PEAK_REOPENS_AT = Date.parse("2026-12-04T18:00:00Z");
+    // 18:00 London time Fri 12 Feb 2027 = 18:00 UTC (GMT).
+    const PHANTOM_PEAK_REOPENS_AT = Date.parse("2027-02-12T18:00:00Z");
 
     const ticketPhase = document.getElementById("ticketPhase");
     const refurbPhase = document.getElementById("refurbPhase");
@@ -1363,7 +1363,7 @@
 
       refurbState.textContent = "NO";
       refurbState.style.color = "#8d3325";
-      refurbMessage.textContent = "Reopening Friday 4 December 2026 · 18:00";
+      refurbMessage.textContent = "Reopening Friday 12 February 2027 · 18:00";
       refurbCountdown.hidden = false;
 
       const total = Math.max(0, Math.floor(remaining / 1000));
@@ -1402,7 +1402,7 @@
     update();
 
     // Keep all timed state changes live while the page remains open.
-    // Ticket windows, the 2pm handover, and the December reopening
+    // Ticket windows, the 2pm handover, and the February reopening
     // all update automatically without a manual refresh.
     const liveTimer = setInterval(update, 1000);
 

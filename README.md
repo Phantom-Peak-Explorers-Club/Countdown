@@ -5,7 +5,7 @@ Replace only `index.html`.
 The refurbishment page is now active immediately.
 
 Everything else remains unchanged:
-- live countdown to 18:00 London time on Friday 4 December 2026
+- live countdown to 18:00 London time on Friday 12 February 2027
 - live second-by-second updates
 - mobile background-tab recovery
 - responsive phone/tablet/laptop layout
